@@ -28,13 +28,13 @@ int main() {
 
     // Calculate the average grade
     double sumGrades = 0.0;
-    string highestGrade = "F";
-    string lowestGrade = "A";
+    string highestGrade = "A";
+    string lowestGrade = "D";
     for (const auto& student : students) {
         sumGrades += student.grade[0]; // Add ASCII value for average calculation
 
-        highestGrade = (student.grade > highestGrade) ? student.grade : highestGrade;
-        lowestGrade = (student.grade < lowestGrade) ? student.grade : lowestGrade;
+        highestGrade = (student.grade < highestGrade) ? student.grade : highestGrade;
+        lowestGrade = (student.grade > lowestGrade) ? student.grade : lowestGrade;
     }
     double averageGrade = sumGrades / numStudents;
 
